@@ -1,0 +1,15 @@
+.user-edit .field {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-edit .field>* {
+    cursor: pointer;
+}
+
+#isAdmin {
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+}

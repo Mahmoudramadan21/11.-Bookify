@@ -1,0 +1,22 @@
+.order-summary .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    padding-top: 170px;
+    padding-bottom: 170px;
+}
+
+@media (max-width: 992px) {
+    .order-summary .container {
+        padding-top: 220px;
+        padding-bottom: 220px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .order-summary .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

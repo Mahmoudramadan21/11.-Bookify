@@ -1,0 +1,32 @@
+.order-summary-section {
+    color: var(--dark-grayish-cyan);
+}
+
+.order-summary-section h2 {
+    width: 400px;
+    font-size: 36px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.order-summary-section {
+    padding: 15px 0;
+}
+
+.order-summary-section:not(:last-child) {
+    border-bottom: 1px solid var(--dark-grayish-cyan);
+}
+
+@media (max-width: 768px) {
+    .order-summary-section h2 {
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .order-summary-section {
+        padding-left: 0;
+    }
+}
