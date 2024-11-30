@@ -1,0 +1,5 @@
+@media (min-width: 992px) {
+    .user-profile-form {
+        width: 300px !important
+    }
+}

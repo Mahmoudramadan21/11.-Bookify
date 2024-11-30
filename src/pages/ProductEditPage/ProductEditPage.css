@@ -1,0 +1,13 @@
+.product-edit .form-title {
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .product-edit .form-title {
+        width: 600px;
+    }
+
+    .product-edit .form {
+        width: 600px;
+    }
+}

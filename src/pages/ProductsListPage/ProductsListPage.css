@@ -1,0 +1,40 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.heading button {
+    margin-left: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    display: flex;
+    padding: 15px 20px;
+    background-color: var(--dark-blue-gray);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.heading button a {
+    color: white;
+}
+
+.heading button svg {
+    margin-right: 5px;
+}
+
+.products-list table tbody a {
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .heading button {
+        font-size: 11px;
+        width: 100%;
+        padding: 15px 8px;
+    }
+}

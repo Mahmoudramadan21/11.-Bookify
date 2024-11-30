@@ -1,0 +1,120 @@
+.book-section {
+    margin-top: var(--section-gap);
+    margin-bottom: var(--section-gap);
+}
+
+.book-section .container {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-section .image img {
+    max-width: 100%;
+}
+
+.book-section .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-section .info-section .info-title {
+    font-size: 46px;
+    max-width: 450px;
+    line-height: 1.3;
+}
+
+.book-section .info-section .info-title .highlight {
+    color: var(--bright-blue);
+}
+
+.book-section .info-section .info-description {
+    color: var(--dark-grayish-cyan);
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.book-section .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-section .stats .stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-section .stats .stat-item .stat-number {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.book-section .stats .stat-item .stat-label {
+    font-size: 16px;
+    color: var(--dark-grayish-cyan);
+}
+
+.book-section .explore-button {
+    border: none;
+    background-color: var(--bright-blue);
+    color: white;
+    width: 170px;
+    padding: 15px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .book-section .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .book-section .info-section {
+        order: -1;
+        align-items: center;
+    }
+
+    .book-section .info-section .info-description {
+        max-width: 500px;
+    }
+
+    .book-section .stats {
+        width: 100%;
+        justify-content: space-evenly;
+        /* gap: 50px; */
+    }
+
+}
+
+@media (max-width: 550px) {
+    .book-section .info-section .info-title {
+        font-size: 26px;
+    }
+
+    .book-section .info-section .info-description {
+        font-size: 14px;
+    }
+
+    .book-section .stats {
+        justify-content: space-between
+    }
+
+    .book-section .stats .stat-item .stat-number {
+        font-size: 22px;
+    }
+
+    .book-section .stats .stat-item .stat-label {
+        font-size: 14px;
+    }
+
+    .book-section .image img {
+        max-width: 100%;
+    }
+}

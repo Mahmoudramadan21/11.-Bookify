@@ -1,0 +1,21 @@
+.order-summary-info .place-order-btn button {
+    text-transform: uppercase;
+}
+
+.order-summary-details {
+    margin-top: 80px;
+    padding: 15px 0 !important;
+    width: 390px;
+}
+
+@media (max-width: 992px) {
+    .order-summary-details {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .place-order-btn button {
+        font-size: 14px;
+    }
+}

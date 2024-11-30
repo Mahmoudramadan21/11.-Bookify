@@ -1,0 +1,13 @@
+.product-create .form-title {
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .product-create .form-title {
+        width: 600px;
+    }
+
+    .product-create .form {
+        width: 600px;
+    }
+}

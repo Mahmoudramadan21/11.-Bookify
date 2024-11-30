@@ -1,0 +1,14 @@
+.order-details .order-summary-section {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid var(--dark-grayish-cyan);
+}
+
+.order-details .status {
+    width: 100%;
+    padding: 15px;
+    background-color: #efdebf;
+    font-weight: 500;
+}

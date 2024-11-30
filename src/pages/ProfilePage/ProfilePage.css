@@ -1,0 +1,46 @@
+.profile .container {
+    padding-top: 170px;
+    padding-bottom: 170px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.profile table tbody a {
+    color: var(--dark-grayish-cyan);
+    padding: 5px 15px 5px 15px;
+    background-color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 992px) {
+    .profile .container {
+        grid-template-columns: 1fr;
+        gap: var(--section-gap);
+    }
+
+    .profile .form-container {
+        margin: 0 auto;
+    }
+
+    .profile .form-title {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile .container {
+        padding-top: 110px;
+    }
+
+    .profile .form-container {
+        width: 100%;
+    }
+
+    .my-orders {
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+}

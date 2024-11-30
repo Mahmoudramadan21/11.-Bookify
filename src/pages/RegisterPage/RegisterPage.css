@@ -1,0 +1,36 @@
+.name-field {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-signup .login-signup-form .name-field .field {
+    width: 48%;
+}
+
+.error-msg {
+    color: red;
+}
+
+.error::before {
+    content: "* ";
+}
+
+.error {
+    margin-top: 10px;
+    font-size: 12px;
+    color: red;
+}
+
+.login {
+    width: 400px;
+}
+
+.login a {
+    color: var(--bright-blue);
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 100%;
+    }
+}

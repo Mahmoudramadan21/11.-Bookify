@@ -1,0 +1,21 @@
+.order-details .form-title {
+    margin-bottom: 0;
+}
+
+.order-details .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .order-details .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order-details .container .shipping-payment-order-wrapper {
+        width: 100%;
+    }
+}

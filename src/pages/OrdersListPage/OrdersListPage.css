@@ -1,0 +1,6 @@
+.orders-list tbody a {
+    color: var(--dark-grayish-cyan);
+    padding: 5px 15px 5px 15px;
+    background-color: white;
+    font-size: 18px;
+}

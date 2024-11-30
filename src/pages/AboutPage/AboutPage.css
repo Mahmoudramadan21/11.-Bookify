@@ -1,0 +1,36 @@
+.about-section .container {
+    margin: 0 auto;
+    padding-top: 170px;
+    padding-bottom: 170px;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: var(--dark-grayish-cyan);
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .about-section .container {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section h1 {
+        font-size: 28px;
+    }
+
+    .about-section p {
+        font-size: 16px;
+    }
+}
