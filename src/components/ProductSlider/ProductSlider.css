@@ -58,16 +58,14 @@
     }
 
     .products-slider .products-slider-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
         gap: 20px;
-        /* align-items: ; */
     }
 
     .products-slider .products-slider-container>* {
-        min-width: 150px;
+        min-width: 190px;
+        margin-bottom: auto;
     }
+
 
     .products-slider .arrow-right,
     .products-slider .arrow-left {

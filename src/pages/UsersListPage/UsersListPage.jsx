@@ -29,14 +29,16 @@ function UsersListPage() {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+
         if (!userInfo?.isAdmin) {
             navigate("/");
         }
     }, [userInfo, navigate]);
 
     useEffect(() => {
-        dispatch(listUsers())
-    }, [dispatch, successEdit, successDelete])
+        if (!users?.length && !loading) dispatch(listUsers())
+    }, [dispatch, users, loading, successEdit, successDelete])
 
 
     return (

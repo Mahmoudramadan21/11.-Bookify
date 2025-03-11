@@ -23,10 +23,13 @@ function HomePage() {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(bestSales())
-        dispatch(topRated())
-        dispatch(listProducts())
-    }, [dispatch]);
+        window.scrollTo(0, 0)
+        if (!bestProducts?.length && !loadingBestSale) dispatch(bestSales())
+        if (!topProducts?.length && !loadingTopRated) dispatch(topRated())
+        if (!products?.length && !loading) dispatch(listProducts())
+    }, [dispatch, bestProducts, topProducts, products, loadingBestSale, loadingTopRated, loading]);
+
+
 
     return (
         <>

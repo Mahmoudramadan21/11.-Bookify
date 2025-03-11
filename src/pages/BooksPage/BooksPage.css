@@ -36,7 +36,7 @@
 
 @media (max-width: 540px) {
     .books-page .books {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
     }
 
     .books-page h2 {
@@ -47,6 +47,16 @@
 @media (max-width: 540px) {
     .books-page .books {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .books-page .books .product-card {
+        width: 45%;
+        margin-bottom: auto;
+    }
+
+    .product-card .product-image {
+        min-width: 100%;
     }
 }

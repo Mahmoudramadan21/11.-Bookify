@@ -27,6 +27,7 @@ function OrderDetailsPage() {
         useSelector(state => state.userLogin)
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         if (!order || order.id !== id || successDeliver || successPay) {
             dispatch({ type: ORDER_PAY_RESET })
             dispatch({ type: ORDER_DELIVER_RESET })

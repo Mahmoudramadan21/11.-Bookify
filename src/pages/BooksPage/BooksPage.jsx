@@ -15,8 +15,9 @@ function BooksPage() {
     const searchQuery = new URLSearchParams(search).get('s'); // Parse search parameter
 
     useEffect(() => {
-        dispatch(listProducts());
-    }, [dispatch]); // Add dispatch to the dependency array
+        window.scrollTo(0, 0)
+        if (!products?.length && !loading) dispatch(listProducts())
+    }, [dispatch, products, loading]); // Add dispatch to the dependency array
 
     return (
         <section className="books-page">

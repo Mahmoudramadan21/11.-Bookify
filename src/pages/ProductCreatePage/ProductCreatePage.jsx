@@ -29,6 +29,8 @@ function ProductCreatePage() {
     const inputRefs = {}; // Object to hold refs for each input field
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+
         if (!userInfo?.isAdmin) {
             navigate("/");
         }

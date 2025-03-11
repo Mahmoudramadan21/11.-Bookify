@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { openSidebar, closeSidebar } from '../../store/actions/sidebarAction';
 import './Sidebar.css';
@@ -7,49 +7,62 @@ import { faClose, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
-
 function Sidebar() {
     const isOpen = useSelector(state => state.sidebar.isOpen);
     const dispatch = useDispatch();
 
-    const handleToggle = () => {
+    const handleToggle = useCallback(() => {
         if (isOpen) {
             dispatch(closeSidebar());
         } else {
             dispatch(openSidebar());
         }
-    };
+    }, [isOpen, dispatch]);
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [isOpen]);
 
     return (
-        <header className={`mobile-navbar ${isOpen ? "fade-in" : ""}`}>
-            <nav className="container">
-                <div className={`logo-menu-wrapper`}>
+        <aside className={`mobile-navbar ${isOpen ? "fade-in" : ""}`} tabIndex={isOpen ? 0 : -1}>
+            <nav className="container" role="navigation">
+                <div className="logo-menu-wrapper">
                     <div className="logo">
                         <img src={logo} alt="Bookstore Logo" />
                     </div>
                     <div className="close-menu">
-                        <FontAwesomeIcon className='close' icon={faClose} onClick={() => handleToggle()} />
+                        <FontAwesomeIcon
+                            className='close'
+                            icon={faClose}
+                            onClick={handleToggle}
+                            aria-label="Close sidebar"
+                        />
                     </div>
                 </div>
                 <ul>
                     <li>
-                        <Link to="/" onClick={handleToggle}>
+                        <Link to="/" onClick={handleToggle} tabIndex={isOpen ? 0 : -1}>
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" onClick={handleToggle}>
+                        <Link to="/about" onClick={handleToggle} tabIndex={isOpen ? 0 : -1}>
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link to="/books" onClick={handleToggle}>
+                        <Link to="/books" onClick={handleToggle} tabIndex={isOpen ? 0 : -1}>
                             Shop
                         </Link>
                     </li>
                 </ul>
             </nav>
-        </header >)
+        </aside>
+    );
 }
 
 export default Sidebar;

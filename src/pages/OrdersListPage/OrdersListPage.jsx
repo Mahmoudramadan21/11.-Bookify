@@ -17,8 +17,9 @@ function OrdersListPage() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        dispatch(listOrders())
-    }, [])
+        window.scrollTo(0, 0)
+        if (!orders?.length && !loading) dispatch(listOrders())
+    }, [orders, loading])
 
     useEffect(() => {
         if (!userInfo?.isAdmin) {

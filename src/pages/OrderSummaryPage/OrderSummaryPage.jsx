@@ -9,7 +9,6 @@ import { useNavigate } from 'react-router';
 
 function OrderSummaryPage() {
     const { cartItems, shippingAddress, paymentMethod } = useSelector(state => state.cart)
-    const dispatch = useDispatch()
     const navigate = useNavigate()
 
     const itemsPrice = (cartItems.reduce((cur, acc) => cur + Number(acc.price), 0)).toFixed(2)
@@ -17,6 +16,8 @@ function OrderSummaryPage() {
     const totalPrice = (+itemsPrice + +taxPrice).toFixed(2)
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+
         if (cartItems.length == 0)
             navigate("/cart")
     }, [])

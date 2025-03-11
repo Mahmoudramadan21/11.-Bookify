@@ -58,8 +58,8 @@ function Header() {
 
                     <nav>
                         <ul>
-                            <li><Link to="/"> Home</Link></li>
-                            <li><ScrollLink to="testimonials" smooth={true} duration={500}>Reviews</ScrollLink ></li>
+                            <li><a href="#"> Home</a></li>
+                            <li><a href="#testimonials" >Reviews</a ></li>
                             <li><Link to="/books">Shop</Link></li>
                             <li><Link to="/about">About Us</Link></li>
                         </ul>

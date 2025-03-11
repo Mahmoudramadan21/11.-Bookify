@@ -7,6 +7,12 @@
   --section-gap: 70px;
 }
 
+:focus-visible {
+  outline: 3px solid var(--dark-blue-gray);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
 html {
   scroll-behavior: smooth;
 }

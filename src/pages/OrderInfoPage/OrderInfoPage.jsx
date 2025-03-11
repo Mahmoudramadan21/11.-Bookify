@@ -26,6 +26,8 @@ function OrderInfoPage() {
     }));
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+
         if (!order || order.id !== id) {
             dispatch(getOrderDetails(id))
         }
@@ -38,7 +40,7 @@ function OrderInfoPage() {
     }, [userInfo, navigate]);
 
     return (
-        <div className="order-details">
+        <div className="order-details order-info">
             <div className="container">
                 {loadingOrderDetails ? (
                     <Loader />

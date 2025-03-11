@@ -28,14 +28,16 @@ function ProductsListPage() {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+
         if (!userInfo?.isAdmin) {
             navigate("/");
         }
     }, [userInfo, navigate]);
 
     useEffect(() => {
-        dispatch(listProducts())
-    }, [dispatch, successEdit, successDelete])
+        if (!products?.length && !loading) dispatch(listProducts())
+    }, [dispatch, products, loading, successEdit, successDelete])
 
 
     return (

@@ -24,6 +24,7 @@ function LoginPage() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         if (userInfo) {
             navigate("/");
         }
@@ -83,7 +84,6 @@ function LoginPage() {
 
         if (validate()) {
             dispatch(userLogin(data));
-            navigate(cartItems.length > 0 ? "/cart" : "/");
         } else {
             setErrorMsg('Please fix the errors above.');
         }

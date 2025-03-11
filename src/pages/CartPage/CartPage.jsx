@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./CartPage.css"
 import CartItem from '../../components/CartItem/CartItem';
 import CartSummary from '../../components/CartSummary/CartSummary';
@@ -7,6 +7,10 @@ import { useSelector } from 'react-redux';
 function CartPage() {
 
     const { cartItems } = useSelector(state => state.cart)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div className='cart'>

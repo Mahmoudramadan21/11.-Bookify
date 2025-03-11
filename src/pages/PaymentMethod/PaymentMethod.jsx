@@ -14,6 +14,8 @@ function PaymentMethod() {
     const navigate = useNavigate()
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+
         if (cartItems.length == 0)
             navigate("/cart")
     }, [])
